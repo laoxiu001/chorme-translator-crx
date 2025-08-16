@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./scripts/tailwindcss.js"></script>
+    <script src="./scripts/jquery-3.7.1.min.js"></script>
+    <title>Translator</title>
+  </head>
+  <body class="w-[500px] p-[20px]">
+    <h1 class="text-xl font-bold text-center">Google AI Translator</h1>
+    <div class="my-[20px]">
+      <textarea
+        id="inputOrigin"
+        placeholder="请输入需要翻译的文本"
+        class="p-[10px] w-full h-[150px] text-[16px] border-[1px] border-[#ccc] rounded-[8px]"
+      ></textarea>
+      <textarea
+        readonly
+        id="inputResult"
+        placeholder="翻译结果"
+        class="mt-[10px] p-[10px] w-full h-[150px] text-[16px] border-[1px] border-[#ccc] rounded-[8px]"
+      ></textarea>
+    </div>
+    <div class="flex justify-center">
+      <button
+        id="oneClickCopy"
+        class="mr-[20px] border-[1px] border-blue-500 px-4 py-2 rounded text-[blue]"
+      >
+        复制结果
+      </button>
+      <button
+        id="translateInput"
+        class="bg-blue-500 text-white px-4 py-2 rounded active:bg-blue-600"
+      >
+        翻译文本
+      </button>
+    </div>
+    <script src="./scripts/common.js"></script>
+  </body>
+</html>

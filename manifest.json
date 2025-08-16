@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Chrome Translator",
+  "description": "基于谷歌翻译的Chrome扩展",
+  "version": "1.0",
+  "action": {
+    "default_popup": "src/index.html"
+  },
+  "icons": {
+    "16": "images/16.png",
+    "48": "images/48.png",
+    "128": "images/128.png"
+  },
+  "permissions": [
+    "clipboardRead",
+    "clipboardWrite",
+    "storage",
+    "tabs",
+    "activeTab",
+    "commands",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "src/scripts/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/scripts/content.js"]
+    }
+  ]
+}
