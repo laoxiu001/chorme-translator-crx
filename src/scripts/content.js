@@ -61,13 +61,24 @@ async function showSelectedText() {
 
     // 添加翻译耗时弹窗
     const timeConsumed = Date.now() - startTime;
-    const timeConsumedElement = document.createElement("div");
+    const timeConsumedElement = document.createElement("a");
     timeConsumedElement.style.color = "#999";
     timeConsumedElement.style.fontSize = "12px";
+    timeConsumedElement.style.textDecoration = "none";
     timeConsumedElement.style.marginBottom = "10px";
     timeConsumedElement.style.marginRight = "20px";
     timeConsumedElement.textContent = `翻译耗时：${timeConsumed}ms`;
     popup.appendChild(timeConsumedElement);
+
+    // 添加项目地址
+    const linkElement = document.createElement("a");
+    linkElement.href = "https://github.com/laoxiu001/chorme-translator-crx";
+    linkElement.target = "_blank";
+    linkElement.textContent = "项目地址";
+    // linkElement.style.color = "#007bff";
+    linkElement.style.textDecoration = "none";
+    linkElement.style.marginBottom = "12px";
+    popup.appendChild(linkElement);
 
     // 添加翻译结果
     const textElement = document.createElement("div");
