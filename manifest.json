@@ -15,9 +15,6 @@
     "clipboardRead",
     "clipboardWrite",
     "storage",
-    "tabs",
-    "activeTab",
-    "commands",
     "scripting"
   ],
   "background": {
